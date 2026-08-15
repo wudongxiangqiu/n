@@ -1,0 +1,1961 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初音未来天下第一！</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4cc9f0;
+            --text-color: #2b2d42;
+            --bg-color: #f8f9fa;
+            --success-color: #2a9d8f;
+            --warning-color: #f4a261;
+            --card-bg: #ffffff;
+            --tag-bg: rgba(67, 97, 238, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #f0f2f5 0%, #e6e9ef 100%);
+            padding: 20px;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .logo-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 28px;
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        .logo-text {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #6c757d;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .announcement {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 0 auto 30px;
+            max-width: 800px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            font-size: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .announcement::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+        }
+
+        .announcement a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-block;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        .announcement a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+            background: rgba(67, 97, 238, 0.1);
+        }
+
+        .controls-container {
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 12px;
+            padding: 15px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: all 0.3s;
+            padding-left: 45px;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.15);
+            outline: none;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #adb5bd;
+            font-size: 18px;
+        }
+
+        .category-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .category-tabs a {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background: var(--tag-bg);
+            color: var(--primary-color);
+            transition: all 0.2s;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .category-tabs a i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
+
+        .category-tabs a.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        .category-tabs a:hover:not(.active) {
+            background: rgba(67, 97, 238, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .app-item {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .app-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border-color: rgba(67, 97, 238, 0.2);
+        }
+
+        .app-header {
+            padding: 20px 20px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .app-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            margin-right: 15px;
+            object-fit: cover;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-info {
+            flex: 1;
+        }
+
+        .app-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .app-category {
+            font-size: 13px;
+            color: var(--primary-color);
+            background: var(--tag-bg);
+            padding: 3px 10px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .app-body {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .app-description {
+            font-size: 14px;
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 52px;
+        }
+
+        .app-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .tag i {
+            margin-right: 5px;
+            font-size: 11px;
+        }
+
+        .version-tag {
+            background: rgba(67, 97, 238, 0.1);
+            color: var(--primary-color);
+        }
+
+        .size-tag {
+            background: rgba(42, 157, 143, 0.1);
+            color: var(--success-color);
+        }
+
+        .app-footer {
+            padding: 15px 20px;
+            background: rgba(248, 249, 250, 0.8);
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .download-button {
+            background: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .download-button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+        }
+
+        .donation-section {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .donation-title {
+            font-size: 22px;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .donation-description {
+            font-size: 16px;
+            color: #6c757d;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .donate-button {
+            background: var(--success-color);
+            padding: 12px 30px;
+            border-radius: 10px;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(42, 157, 143, 0.3);
+        }
+
+        .donate-button:hover {
+            background: #228176;
+            transform: translateY(-2px);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 90vh;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #666;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .modal-close:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-right: 40px;
+        }
+
+        .modal-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 18px;
+            margin-right: 25px;
+            object-fit: cover;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-title-container {
+            flex: 1;
+        }
+
+        .modal-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .modal-category {
+            background: var(--tag-bg);
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .modal-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .modal-tag {
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .modal-tag i {
+            margin-right: 5px;
+        }
+
+        .modal-body {
+            max-height: calc(90vh - 300px);
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 14px;
+            margin-bottom: 25px;
+        }
+
+        .modal-description {
+    line-height: 1.8;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    white-space: pre-line;
+}
+
+        .modal-footer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .modal-download {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 35px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            transition: all 0.2s;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+
+        .modal-download:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #6c757d;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .app-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .modal-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .modal-icon {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .category-tabs {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding: 15px 10px;
+            }
+            
+            .app-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                padding: 20px;
+            }
+    </style>
+</head>
+<body>
+
+        <div class="announcement">
+            <p>欢迎访问应用市场。使用即视为同意自担全部风险，作者不承担使用后果。反馈请
+            <a href="https://flowus.cn/form/63f07af8-0e92-4ecb-aa1a-fd38dd59a641?code=5TNQ72">点击这里</a></p>
+            <p>1. 本内容仅供个人学习/参考使用，请于24小时内删除。</p>
+            <p>2. 使用者需自行承担因传播、滥用导致的任何法律责任。</p>
+            <p>3. 若内容涉及侵权，请联系删除，本人不承担相关责任。</p>
+        </div>
+
+        <div class="controls-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="输入应用名称、描述或类别进行搜索...">
+            </div>
+            
+            <div class="category-tabs">
+                <a href="#" class="active" data-category="all">
+                    <i class="fas fa-th"></i> 全部
+                </a>
+                <a href="#" data-category="实用工具">
+                    <i class="fas fa-tools"></i> 实用工具
+                </a>
+                <a href="#" data-category="影视音乐">
+                    <i class="fas fa-film"></i> 影视音乐
+                </a>
+                <a href="#" data-category="小说漫画">
+                    <i class="fas fa-book"></i> 小说漫画
+                </a>
+            </div>
+        </div>
+
+        <div class="app-grid" id="appList">
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="http://cdnjson.com/images/2025/03/29/icon.png" alt="MikuBeat图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">MikuBeat</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">MikuBeat是一款热爱催生的术曲播放器，提供高质量的音频体验和丰富的歌曲库。支持多种格式播放和自定义播放列表，是音乐爱好者的理想选择。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v0.3Release
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 6.46MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iU4Rg2shrrzc&pwd=26yq" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-24</div>
+                </div>
+            </div>
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://ts3.tc.mm.bing.net/th?id=OIP-C.qYHAHSJOiRz5uY78ylfV8AAAAA&w=100&h=100&c=1&bgcl=050607&r=0&o=6&cb=15&dpr=3&pid=ImgRC" alt="LaQoo图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">LaQoo</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">免费简洁的动漫播放App，支持下载、弹幕、收藏和多动漫源切换功能，提供流畅的观影体验。无广告干扰，界面简洁易用。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.2.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 5.73MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://www.123912.com/s/9LpDVv-PLyjh" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-20</div>
+                </div>
+            </div>
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/1579_37366248963713.png" alt="哔哩哔哩图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">哔哩哔哩</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">内置漫游可无限试看所有画质，解锁高级功能，支持自定义主题和弹幕设置。优化了播放体验，加载速度更快。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v8.14.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 138.89MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://pan.fcpig.com/s/MmxsP" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-18</div>
+                </div>
+            </div>
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://image.niucoo.cn/niucoo/imgfile/20241112/12110734qvkk.png" alt="小萌动漫图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">小萌动漫</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">小萌动漫为您呈现1080p超清画质，让您沉浸在细节精致的动画世界中。支持Android和iOS双端，随时随地观看，体验不一样的动漫乐趣！</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v4.2.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 41.8MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://silvery.lanzouu.com/iVPPD2iq3epe" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-16</div>
+                </div>
+            </div>
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="http://pic.j9p.com/up/2024-10/2024102893553132.png" alt="易读图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">易读</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">内置大量小说源以及在线语音源可以更换，非常强大。界面简单不需要繁琐的操作就能使用，支持多种格式导入和夜间模式。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v5.7.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 28.5MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://wwqv.lanzout.com/iqlN22ct6k5a" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-14</div>
+                </div>
+            </div>
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2262_119904776170924.png" alt="MX Player图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">MX Player</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去广告版，强大的视频播放器，支持多种视频格式和字幕，提供流畅的观影体验。优化了硬件加速，支持4K视频播放。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.97.8
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 44.91MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iOx5330bi1kj&pwd=ht3y" 
+                       class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    <div class="app-date">2025-05-10</div>
+                </div>
+            </div>
+<div class="app-grid" id="appList"> 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://s1.mfunz.com/mfunz/imgfile/20250314/14151039fvin.png" alt="无限邮箱图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">无限邮箱高级版</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">里有多种邮箱类型，解锁高级版</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 15.2MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://www.123684.com/s/YWChTd-26zav" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://www.magicalapk.com/img/appparkicon.6321d110.png" alt="应用乐园图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">应用乐园</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">探索无限可能，尽在应用乐园！这里汇聚了各式各样的趣味软件，无论是休闲娱乐还是工作学习，总有一款适合你。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.1.2
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 8.59MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/ixgai2vbx1ti&pwd=8yr8i" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+ 
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/magicalapp/deal/9530661_271431893144683.png" alt="笔趣阁图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">笔趣阁纯净版</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">是一款能够让朋友们都可以在手机上无限看书的优质软件，它拥有规模巨大的书库，涵盖了各类风格在里面，包含各种海量小说。最主要的还都是免费的！</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v3.2.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 22.5MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://souluoshou.lanzouv.com/iB0XX2chmt9c" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2796_334670381281134.png" alt="Salt Player图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">Salt Player</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">简单易用的高颜值本地音乐播放器，适配竖屏、横屏、平板界面，支持多种音频格式。完善的专辑艺术家分类，支持歌单，支持歌曲统计。支持 Android 媒体库和自定义文件夹扫描文件。强大歌词功能，支持车载蓝牙歌词、系统级状态栏歌词、桌面歌词、悬浮窗状态栏歌词等等</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v10.9.0-alpha01
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 10.89MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iGVRW2y91rfe&pwd=6muy" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/16441_4087305081146.png" alt="Lanerc图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">Lanerc</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">无广告画质高，去广告纯净版</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.3
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 45.9MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iK1LS2ukdlwj&pwd=btkz" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2796_4950104601756.png" alt="淘小说图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">淘小说</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员，精简安装包</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v10.6.3
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 22.2MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iGROk2s3qglc&pwd=f641" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/magicalapp/deal/9554605_79343783369627.png" alt="动漫共和国图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">动漫共和国</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.0.5
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 60.7MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/in3T12tbdryh&pwd=c1ep" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="http://xifan999.com/xifan09/2024131339444033.png" alt="稀饭动漫图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">稀饭动漫</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">最新破解免广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v4.2.7
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 31.2MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/i9pfh2x5hq2b&pwd=42fc" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/1_22886173303715.png" alt="一个木函图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">一个木函</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员，登录即解锁</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v7.0.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 12.5MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/i5YJT2sgywha&pwd=50j1" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://s2.loli.net/2024/07/26/8xMjvknJ1BCUQ2h.png" alt="囧次元图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">囧次元</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员，精简大小，去广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.5.7.8
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 60.93MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iFtrF32r9mih&pwd=2ubm" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2043_115589803059340.png" alt="阿里云盘图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">阿里云盘</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员，云容量云解压属于云验证没有解锁，其他本地功能已全部解锁，画质最高可支持到高清永久</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v6.9.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 155.50MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://pan.hefamily.net/s/yPwAuo" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/245_973785965706496.png" alt="MT管理器图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">MT管理器</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁永久会员 内置插件</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v2.14.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 18.6MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/i56Kx2sqx2pc&pwd=6eaj" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+ 
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2796_23857560082981.png" alt="静读天下图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">静读天下专业版</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">静读天下Moon+Reader 是Google Play 排名第一的电子书阅读器，支持在线电子书库和本地书籍阅读，滚动流畅，内容丰富。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v8.5.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 25.4MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iSa2I2ss1dra&pwd=2h0t" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/16836_670163532669715.png" alt="QQ浏览器图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">QQ浏览器</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">play版 不提示更新，养老用</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v12.8.5
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 31.0MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/i56Kx2sqx2pc&pwd=6eaj" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+ 
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="https://image.goapk.com/goapk/imgfile/20250329/29150332o05c.png" alt="创漫客图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">创漫客</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">破解会员，去广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v3.1.2
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 27.8MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iySvx2te8zba&pwd=1brg" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2043_66278176107110.png" alt="快指点击器图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">快指点击器</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">1.解锁会员 2.免登录 3.去广告 4.去启动页</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v2.3.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 14.7MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iEFxd2tygjja&pwd=eams" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/486_12853774245824.png" alt="音乐标签图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">音乐标签</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">一款可以编辑歌曲的标题，专辑，艺术家等信息的音乐标签编辑器，可在线搜索并自动添加音乐内标签、歌词、封面，支持批量修改。配合Salt Player使用更佳</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.2.5
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 12.3MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iEkol2tzlhje&pwd=adp6y" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/1181_240024061024306.png" alt="SD Maid SE图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">SD Maid SE</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁高级版 SD Maid SE是一款专门用于维护的 Android 文件管理工具。其核心目的是释放空间并删除不需要的数据。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.4.12-rc0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 7.84MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/ilp062y8tw6h&pwd=gyjf" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2796_49668238093552.png" alt="酷我音乐图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">酷我音乐</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁永久vip、下载付费HiFi数字专辑、下载歌曲自动豪华VIP极速下载加速、一键HiFi、AI智能音效</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v11.2.0.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 170.20MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://008686.xyz/s/ZLJFG" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/981_48011269545694.png" alt="Scene图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">Scene</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">破解解锁高级版</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v6.2.3
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 14.9MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iOJJO2un7npg&pwd=btom" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/1181_89660613297776.png" alt="BBLL图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">BBLL</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">修复版</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.4.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 21.7MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/ijP1u2s4jr3e&pwd=g7ij" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.Cm04Sy-7wiCWxD_skBoMiQHaHa?dpr=3&pid=ImgDetMain" alt="网易云音乐图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">网易云音乐</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">提取码：8dzW 自带杜比大喇叭B 登陆自带黑胶VIP 免费绿化VIP歌曲音质可听高清臻音</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v9.1.40
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 108.5MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://www.123912.com/s/iHjRjv-thXX?" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/1_10059111752619.png" alt="洛雪音乐图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">洛雪音乐</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">免费听歌可下载音乐 附赠音乐源</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v8.8.8
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 14.4MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://008686.xyz/s/Gg1TE" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/2796_110265220180800.png" alt="dynamicSpot图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">dynamicSpot</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">汉化专业版 给你的安卓装上灵动岛</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v2.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 8.2MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://pan.fcpig.com/s/vGVcw" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/334_69604335864332.png" alt="优酷视频图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">优酷视频</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去除开屏广告、播放广告、纯净版本</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v10.2.35
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 86.4MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iunhm2vuy89a&pwd=7te8" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://pic.uzzf.com/up/2023-7/2023714939562816.png" alt="嘶哩嘶哩图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">嘶哩嘶哩</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去除广告，精简安装包</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v3.2.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 24.9MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iwdVd2vxlhni&pwd=cnwb" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/245_395870072545964.png" alt="青听音乐图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">青听音乐</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">青听音乐是一款免费的音乐播放器，支持在线播放和下载 （歌词封面嵌入），提供高质量音乐体验。
+注意：听音乐需要导入音源</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.8
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 25.44MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/io9132z8rufi&pwd=g1f0" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+ 
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="http://cdnjson.com/images/2025/05/25/icon.png" alt="PasteMangaX图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">PasteMangaX</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">拷贝漫画第三方软件，无广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.2
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 22.4MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/irYf92x4q0lc&pwd=6bb2" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/24_119998584605844.png" alt="次元城动画图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">次元城动画</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">一款非常好用的动漫追番软件，用户可以通过次元城动漫app找到各种想看的动漫，无论是国漫、日漫、韩漫这里都能找到，平常喜欢看动漫的小伙伴不要错过了，赶紧来下载吧。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v3.2.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 28.7MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iAYqC2x4upsd&pwd=h8j7" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://img.downkuai.com/logo/20220721/5aace15fe314d6f2670585f815b53b83.png" alt="次元站图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">次元站</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去除广告，精简安装包，介绍：一款非常好用的动漫追番软件，用户可以通过次元城动漫app找到各种想看的动漫，无论是国漫、日漫、韩漫这里都能找到，平常喜欢看动漫的小伙伴不要错过了，赶紧来下载吧。</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v2.5.3
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 26.9MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iDy742xmc2kh&pwd=az8d" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="https://android-artworks.25pp.com/fs08/2025/03/29/4/125_470d45c55a8996b25c1dcfad2aefe727_con.png" alt="快影图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">快影</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员和部分AI功能，手机号登录使用</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v6.9.0
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 92.5MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://caiyun.139.com/m/i?2mknYyDcu1wfn" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/488_29384593892389.png" alt="MikuMusic图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">MikuMusic</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">一款纯净的初音主题播放器，粉丝群1022720286</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.3
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 14.93MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iltmR2ybh4pe&pwd=8kfa" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+ 
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://www.ptxz.com/attachment/soft/2025/0213/142333_10490356.png" alt="溏心视频图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">溏心视频</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">影视应用，无说明（绝对不是不想写！）</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v3.1.2
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 28.4MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iP1YH2xpv2xc&pwd=c04h" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+
+            <div class="app-item" data-category="小说漫画">
+                <div class="app-header">
+                    <img src="https://img.downkuai.com/logo/20220621/bc3bb29ffe4ed22a46f65b646fd9c333.png" alt="好看漫画图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">好看漫画</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">破解解锁免广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v4.2.1
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 31.7MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/ifcvt2xtng1a&pwd=dbfb" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+                        <div class="app-item" data-category="实用工具">
+                <div class="app-header">
+                    <img src="http://cdnjson.com/images/2025/06/07/icon.png" alt="图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">屏幕录制</div>
+                        <div class="app-category">实用工具</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">非常好用的录制工具，可录制4K和120帧</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.2.6.8
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 4.07MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/ivNXU2y91rwb&pwd=1qoo" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                </div>
+            </div>
+            <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/magicalapp/deal/9315338_34312391047887.png" alt="图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">酷狗音乐概念版</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">解锁会员去广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v4.1.6
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 128.43MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://www.123pan.com/s/CN3djv-7jYWv.html&pwd=A70D" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    </div>
+                </div> 
+                <div class="app-item" data-category="全部">
+                <div class="app-header">
+                    <img src="https://static.codemao.cn/bcx/S1CguRCWxe.png?hash=FkK8rR5N_WR2XMZzAj3jIKoYeAki" alt="图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">向秋软件库</div>
+                        <div class="app-category">无</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">最新版，强烈建议更新最新版本</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.7
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 685.02K
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/i24hP2y9xrab&pwd=7e62" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    </div>
+                </div> 
+                <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://cdn.magicalapk.com/icon/deal/7083_2344638979484961.png" alt="图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">omofun</div>
+                        <div class="app-category">影视音乐</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去除广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.51
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 39.30MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/igFOa2ybi1li&pwd=hrvu" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    </div>
+                </div> 
+                <div class="app-item" data-category="影视音乐">
+                <div class="app-header">
+                    <img src="https://pic.vkxiazai.com/logo/250604/202506041138534834.png" alt="图标" class="app-icon">
+                    <div class="app-info">
+                        <div class="app-title">喵呜漫画</div>
+                        <div class="app-category">小说漫画</div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-description">去除广告</div>
+                    <div class="app-tags">
+                        <div class="tag version-tag">
+                            <i class="fas fa-code-branch"></i> v1.0.5
+                        </div>
+                        <div class="tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> 43.93MB
+                        </div>
+                    </div>
+                </div>
+                <div class="app-footer">
+                    <a href="https://lz.qaiu.top/parser?url=https://wwwe.lanzouq.com/iJouC2z96hni&pwd=ez08" class="download-button">
+                        <i class="fas fa-download"></i> 下载
+                    </a>
+                    </div>
+                </div> 
+           </div>   
+        <div class="donation-section">
+            <h2 class="donation-title">支持开发者</h2>
+            <p class="donation-description">如果这些应用给您带来价值或快乐，可以考虑请作者喝杯咖啡～您的支持是我持续更新的动力！</p>
+            <a href="https://ps.ssl.qhimg.com/t0215916fccfc9ab6db.jpg" class="donate-button">
+                <i class="fas fa-coffee"></i> 捐赠支持
+            </a>
+        </div>
+    </div>
+</div> 
+    <!-- 模态框结构 -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <img id="modalIconImg" class="modal-icon" src="" alt="应用图标">
+                <div class="modal-title-container">
+                    <h2 class="modal-title" id="modalTitle">MikuBeat</h2>
+                    <div class="modal-category" id="modalCategory">影视音乐</div>
+                    <div class="modal-tags">
+                        <div class="modal-tag version-tag">
+                            <i class="fas fa-code-branch"></i> <span id="modalVersion">v2.1.5</span>
+                        </div>
+                        <div class="modal-tag size-tag">
+                            <i class="fas fa-weight-hanging"></i> <span id="modalSize">18.7MB</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-description" id="modalDescription"></div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="modal-download" id="modalDownload">
+                    <i class="fas fa-download"></i> 立即下载
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 向秋软件库 | 免责声明：本网站所有资源均来源于网络，仅供学习交流使用</p>
+    </footer>
+
+    <script>
+        // 获取元素
+        const modal = document.getElementById('detailModal');
+        const modalClose = document.querySelector('.modal-close');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalDescription = document.getElementById('modalDescription');
+        const modalDownload = document.getElementById('modalDownload');
+        const modalIconImg = document.getElementById('modalIconImg');
+        const modalVersion = document.getElementById('modalVersion');
+        const modalSize = document.getElementById('modalSize');
+        
+        // 获取分类标签和应用列表
+        const categoryTabs = document.querySelectorAll('.category-tabs a');
+        const appList = document.getElementById('appList');
+        const appItems = Array.from(appList.getElementsByClassName('app-item'));
+        const searchInput = document.getElementById('searchInput');
+
+        // 随机排序函数
+        function shuffleArray(array) {
+            return array.sort(() => Math.random() - 0.5);
+        }
+
+        // 初始加载时随机排序
+        shuffleArray(appItems).forEach(item => {
+            appList.appendChild(item);
+        });
+
+        // 监听分类标签的点击事件
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', function (e) {
+                e.preventDefault();
+                // 移除所有标签的激活状态
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                // 为当前点击的标签添加激活状态
+                this.classList.add('active');
+                // 获取当前选中的分类
+                const selectedCategory = this.getAttribute('data-category');
+                // 根据分类显示或隐藏应用
+                shuffleArray(appItems).forEach(item => {
+                    if (selectedCategory === 'all' || item.getAttribute('data-category') === selectedCategory) {
+                        item.style.display = 'flex';
+                        appList.appendChild(item); // 重新添加以实现随机排序
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // 监听输入框的输入事件
+        searchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase(); // 获取搜索关键词并转为小写
+            const activeCategory = document.querySelector('.category-tabs a.active').getAttribute('data-category');
+
+            // 扫描所有应用项
+            shuffleArray(appItems).forEach(item => {
+                const title = item.querySelector('.app-title').textContent.toLowerCase();
+                const description = item.querySelector('.app-description').textContent.toLowerCase();
+
+                // 检查标题或描述包含搜索关键词
+                if ((title.includes(searchTerm) || description.includes(searchTerm)) &&
+                    (activeCategory === 'all' || item.getAttribute('data-category') === activeCategory)) {
+                    item.style.display = 'flex'; // 显示匹配的软件
+                    appList.appendChild(item); // 重新添加以实现随机排序
+                } else {
+                    item.style.display = 'none'; // 隐藏不匹配的软件
+                }
+            });
+        });
+        
+        // 模态框控制
+        document.querySelectorAll('.app-item').forEach(item => {
+            item.addEventListener('click', function(e) {
+                // 排除下载按钮的点击
+                if(e.target.closest('.download-button')) return;
+                
+                const icon = this.querySelector('.app-icon').src;
+                const title = this.querySelector('.app-title').textContent;
+                const category = this.querySelector('.app-category').textContent;
+                const description = this.querySelector('.app-description').textContent;
+                const downloadUrl = this.querySelector('.download-button').href;
+                const version = this.querySelector('.version-tag').textContent;
+                const size = this.querySelector('.size-tag').textContent;
+                
+                // 填充模态框内容
+                modalTitle.textContent = title;
+                modalCategory.textContent = category;
+                modalDescription.textContent = description;
+                modalDownload.href = downloadUrl;
+                modalIconImg.src = icon;
+                modalVersion.textContent = version;
+                modalSize.textContent = size;
+                
+                // 显示模态框
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // 关闭模态框的多种方式
+        // 点击关闭按钮
+        modalClose.addEventListener('click', () => {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // 点击背景关闭
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // ESC键关闭
+        document.addEventListener('keydown', (e) => {
+            if(e.key === 'Escape') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // 防止手势缩放
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+    </script>
+</body>
+</html> 
