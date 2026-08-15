@@ -1,0 +1,33 @@
+{
+  "exportDate": "2026-08-15T08:56:33.895Z",
+  "version": "1.0",
+  "categories": [
+    "工具",
+    "社交",
+    "游戏"
+  ],
+  "apps": [
+    {
+      "id": "1",
+      "name": "云析",
+      "icon": "https://cdnjson.com/images/2026/08/15/icon.png",
+      "download": "http://4275.com/celwwp",
+      "size": "14GB",
+      "desc": "让你不受限制",
+      "screenshots": [
+        "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg"
+      ],
+      "category": ""
+    },
+    {
+      "id": "2",
+      "name": "微信",
+      "icon": "",
+      "download": "http://4275.com/celwwp",
+      "size": "5GB",
+      "desc": "聊天",
+      "screenshots": [],
+      "category": "社交"
+    }
+  ]
+}
