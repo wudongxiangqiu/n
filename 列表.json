@@ -1,13 +1,10 @@
 {
-  "exportDate": "2026-08-15T13:21:14.252Z",
+  "exportDate": "2026-08-15T15:39:37.240Z",
   "version": "1.0",
   "categories": [
     "工具",
     "社交",
-    "游戏",
-    "绅士软件",
-    "福利",
-    "作者推荐"
+    "动漫"
   ],
   "apps": [
     {
@@ -15,8 +12,8 @@
       "name": "云析",
       "icon": "https://cdnjson.com/images/2026/08/15/icon.png",
       "download": "http://4275.com/celwwp",
-      "size": "14GB",
-      "desc": "让你不受限制",
+      "size": "3MB",
+      "desc": "一款开源的下载软件，通过登陆已有帐号来进行不限速下载",
       "screenshots": [
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg",
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg"
@@ -24,14 +21,16 @@
       "category": "工具"
     },
     {
-      "id": "2",
-      "name": "微信",
-      "icon": "",
-      "download": "http://4275.com/celwwp",
-      "size": "5GB",
-      "desc": "聊天",
-      "screenshots": [],
-      "category": "社交"
+      "id": "3",
+      "name": "Kazumi",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8fjZyhd3xHpvlFs59uz5HUz7Czsu8LUmWLTJ5WMCo*iKnZ.rsuNimp*eQXNp*9fNvBt7pfjFmguAyW.Jsn9E7fE!/c=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/iB2mm42l5rrc&pwd=9acm",
+      "size": "30.03MB",
+      "desc": "拿来看动漫的。\n基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。\n开源链接：https://github.com/Predidit/Kazumi",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8bxvcEaoAE5TPwRCHCIeAhivnXHy7saIR6R*rpbGGiYTY3QUFlyn3l3.xRdqA.yrtUZ.6Yzo6TnT9qb8FgKPabI!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "动漫"
     }
   ]
-}
+}}
