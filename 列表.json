@@ -1,10 +1,13 @@
 {
-  "exportDate": "2026-08-15T08:56:33.895Z",
+  "exportDate": "2026-08-15T13:21:14.252Z",
   "version": "1.0",
   "categories": [
     "工具",
     "社交",
-    "游戏"
+    "游戏",
+    "绅士软件",
+    "福利",
+    "作者推荐"
   ],
   "apps": [
     {
@@ -15,9 +18,10 @@
       "size": "14GB",
       "desc": "让你不受限制",
       "screenshots": [
+        "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg",
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg"
       ],
-      "category": ""
+      "category": "工具"
     },
     {
       "id": "2",
