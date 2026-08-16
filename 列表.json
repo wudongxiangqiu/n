@@ -1,5 +1,5 @@
 {
-  "exportDate": "2026-08-15T15:39:37.240Z",
+  "exportDate": "2026-08-16T02:04:32.347Z",
   "version": "1.0",
   "categories": [
     "工具",
@@ -11,7 +11,7 @@
       "id": "1",
       "name": "云析",
       "icon": "https://cdnjson.com/images/2026/08/15/icon.png",
-      "download": "http://4275.com/celwwp",
+      "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/iuDvl42l5r0f&pwd=4ghq",
       "size": "3MB",
       "desc": "一款开源的下载软件，通过登陆已有帐号来进行不限速下载",
       "screenshots": [
@@ -21,7 +21,7 @@
       "category": "工具"
     },
     {
-      "id": "2",
+      "id": "3",
       "name": "Kazumi",
       "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8fjZyhd3xHpvlFs59uz5HUz7Czsu8LUmWLTJ5WMCo*iKnZ.rsuNimp*eQXNp*9fNvBt7pfjFmguAyW.Jsn9E7fE!/c=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
       "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/iB2mm42l5rrc&pwd=9acm",
@@ -31,6 +31,21 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8bxvcEaoAE5TPwRCHCIeAhivnXHy7saIR6R*rpbGGiYTY3QUFlyn3l3.xRdqA.yrtUZ.6Yzo6TnT9qb8FgKPabI!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
       "category": "动漫"
+    },
+    {
+      "id": "4",
+      "name": "APK Mesh",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3mHR.JeSAB.T1lwmLRpTD0mkcRMR6lGWyNmG2gflsyOKaAnv*NrhCdr*V7J1Fv5yI!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/ivgEC42o0n3c&pwd=3tva",
+      "size": "58.37M",
+      "desc": "一款开源的应用下载商店，可导入源",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul25CL0Zatns*iDsfeeOt0BqqmQF9qSYhxzjfXZrK7RtGonzpUVPUp4vFJ9OGd0lclU!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3Bh.H4xTfAXdqHh.8qGailcjPFBlVd4lQtbgpSFH6de2tgTn*JnPCegh7e3m1Tw80!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul0Gjp5L45XIg34LXglMqNgF1Epfjq.7BeAAj.6AN2zYgvrEwZ3HOxjRHupmDRx6HH0!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3UOk03uFVgC7H2DhKiTPdlvvzwJmyGtqyIjA4slFzXPv0aqPONM*l0XHV1HiRQL1E!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "工具"
     }
   ]
 }
