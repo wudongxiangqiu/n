@@ -1,5 +1,5 @@
 {
-  "exportDate": "2026-08-16T02:04:32.347Z",
+  "exportDate": "2026-08-17T12:21:12.256Z",
   "version": "1.0",
   "categories": [
     "工具",
@@ -12,7 +12,7 @@
       "name": "云析",
       "icon": "https://cdnjson.com/images/2026/08/15/icon.png",
       "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/iuDvl42l5r0f&pwd=4ghq",
-      "size": "3MB",
+      "size": "13.35MB",
       "desc": "一款开源的下载软件，通过登陆已有帐号来进行不限速下载",
       "screenshots": [
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg",
@@ -35,6 +35,35 @@
     {
       "id": "4",
       "name": "APK Mesh",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3mHR.JeSAB.T1lwmLRpTD0mkcRMR6lGWyNmG2gflsyOKaAnv*NrhCdr*V7J1Fv5yI!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/ivgEC42o0n3c&pwd=3tva",
+      "size": "58.37M",
+      "desc": "一款开源的应用下载商店，可导入源",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul25CL0Zatns*iDsfeeOt0BqqmQF9qSYhxzjfXZrK7RtGonzpUVPUp4vFJ9OGd0lclU!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3Bh.H4xTfAXdqHh.8qGailcjPFBlVd4lQtbgpSFH6de2tgTn*JnPCegh7e3m1Tw80!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul0Gjp5L45XIg34LXglMqNgF1Epfjq.7BeAAj.6AN2zYgvrEwZ3HOxjRHupmDRx6HH0!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3UOk03uFVgC7H2DhKiTPdlvvzwJmyGtqyIjA4slFzXPv0aqPONM*l0XHV1HiRQL1E!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "工具"
+    },
+    {
+      "id": "5",
+      "name": "NPatch",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8X3fp938.hc*SpT3gAqnnlc*wKpR20Tuc1gtf*H0jrAAbi8*lj3mAXz0fFMqrq8pBCGV0QmD6FTbMsLGu05NSwc!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/iPTXy42xtcub&pwd=1t3b",
+      "size": "6.42MB",
+      "desc": "一款基于 LSPosed 的免 Root Xposed 框架\n支持102",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8QFsQ*J8ZR1GYy.JK5t2fHpatNVM3gieXSbNQbHMlMY7X0gOdeMUr78jCVD9S48vpZw7qIasXSH5kGVdW13MRBg!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8Z.C5cFea3EMsnlTirfatWaUZiaSKAsyTp3k6B5N*y4nayF9A9dqJF.*n7zgqVcrrnN0bQ4NxwAW5f9zDLsX1ww!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqFzfM1dqc1UsOodqBZh4kFJ3wJq5vVgmXdpImPNRQufnK6Eq035Jjypf5a2udO7LEY!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqF7wptRdVe6xPm56yC2bN5Zxc3lY4RnvwuHlulWBKeylFl999hS5ekzyyH.PuF3RBs!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "工具"
+    }
+  ]
+}      "name": "APK Mesh",
       "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3mHR.JeSAB.T1lwmLRpTD0mkcRMR6lGWyNmG2gflsyOKaAnv*NrhCdr*V7J1Fv5yI!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
       "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/ivgEC42o0n3c&pwd=3tva",
       "size": "58.37M",
