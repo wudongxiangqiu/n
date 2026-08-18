@@ -18,7 +18,8 @@
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg",
         "https://cdnjson.com/images/2026/08/15/Screenshot_20260815_160702_com.yunx.app.jpg"
       ],
-      "category": "工具"
+      "category": "工具",
+      "version": "v1.2.4"
     },
     {
       "id": "3",
@@ -30,7 +31,8 @@
       "screenshots": [
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8bxvcEaoAE5TPwRCHCIeAhivnXHy7saIR6R*rpbGGiYTY3QUFlyn3l3.xRdqA.yrtUZ.6Yzo6TnT9qb8FgKPabI!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
-      "category": "动漫"
+      "category": "动漫",
+      "version": "2.2.8"
     },
     {
       "id": "4",
@@ -45,7 +47,8 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul0Gjp5L45XIg34LXglMqNgF1Epfjq.7BeAAj.6AN2zYgvrEwZ3HOxjRHupmDRx6HH0!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8euP.RldY18TfKVAZ4ENul3UOk03uFVgC7H2DhKiTPdlvvzwJmyGtqyIjA4slFzXPv0aqPONM*l0XHV1HiRQL1E!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
-      "category": "工具"
+      "category": "工具",
+      "version": "1.0.0"
     },
     {
       "id": "5",
@@ -60,7 +63,8 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqFzfM1dqc1UsOodqBZh4kFJ3wJq5vVgmXdpImPNRQufnK6Eq035Jjypf5a2udO7LEY!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqF7wptRdVe6xPm56yC2bN5Zxc3lY4RnvwuHlulWBKeylFl999hS5ekzyyH.PuF3RBs!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
-      "category": "工具"
+      "category": "工具",
+      "version": "1.0.7"
     },
     {
       "id": "6",
@@ -73,7 +77,8 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8ZHfQLZEwa8APnea4TO*Bjp.MOa1UFXuBl1IhFxD6x74ERHwaF8XQs0fpiL3eUSRzk450fVk*nzXV9EBcdrR46M!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8ZHfQLZEwa8APnea4TO*BjrcyZYHa7Om0UpB48iYhrjDuf*li5MjZqauguhUNZjhcGZ2aCZPWSo4vGLTDJE6s0E!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
-      "category": "动漫"
+      "category": "动漫",
+      "version": "1.5.8.0"
     },
     {
       "id": "7",
@@ -86,7 +91,8 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8avJT*YafCOB1EzgnxeVVcchMp8B.i1EGxJrbvfY8Ge3hgZJ9zC38zveV4G2QXEWlO0zUEdKT8W0wIxJJSyojPo!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8avJT*YafCOB1EzgnxeVVcdCbVkmOS2uZ.QVFPMCPVSmgojkO.LwexR1Qf4hHVRDkcTnRMzjE*UBIex6c*IoJIs!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
-      "category": "工具"
+      "category": "工具",
+      "version": "v0.1.9"
     }
   ]
 }
