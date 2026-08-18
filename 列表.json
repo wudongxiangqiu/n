@@ -1,5 +1,5 @@
 {
-  "exportDate": "2026-08-17T12:21:12.256Z",
+  "exportDate": "114514",
   "version": "1.0",
   "categories": [
     "工具",
@@ -11,7 +11,7 @@
       "id": "1",
       "name": "云析",
       "icon": "https://cdnjson.com/images/2026/08/15/icon.png",
-      "download": "https://lz0.qaiu.top/parser?url=https://wwbue.lanzouq.com/iuDvl42l5r0f&pwd=4ghq",
+      "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/itWTD432h7cb&pwd=3939",
       "size": "13.35MB",
       "desc": "一款开源的下载软件，通过登陆已有帐号来进行不限速下载",
       "screenshots": [
@@ -59,6 +59,32 @@
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8Z.C5cFea3EMsnlTirfatWaUZiaSKAsyTp3k6B5N*y4nayF9A9dqJF.*n7zgqVcrrnN0bQ4NxwAW5f9zDLsX1ww!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqFzfM1dqc1UsOodqBZh4kFJ3wJq5vVgmXdpImPNRQufnK6Eq035Jjypf5a2udO7LEY!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
         "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8WaNxWu9bfQJoPnav5qFMqF7wptRdVe6xPm56yC2bN5Zxc3lY4RnvwuHlulWBKeylFl999hS5ekzyyH.PuF3RBs!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "工具"
+    },
+    {
+      "id": "6",
+      "name": "囧次元",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8ZHfQLZEwa8APnea4TO*BjoNEqap1w.FN3HZxGtTl3ct1qWame58pgmRyvU0OXR7PWU79VLaoqL9Y1XGksE75XE!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/iAeNO432h5vi&pwd=3939",
+      "size": "35.2MB",
+      "desc": "看动漫的软件，下载后无需登陆即可享受会员功能。\n弹幕和评论区的言论没什么好的，请无视。",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8ZHfQLZEwa8APnea4TO*Bjp.MOa1UFXuBl1IhFxD6x74ERHwaF8XQs0fpiL3eUSRzk450fVk*nzXV9EBcdrR46M!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8ZHfQLZEwa8APnea4TO*BjrcyZYHa7Om0UpB48iYhrjDuf*li5MjZqauguhUNZjhcGZ2aCZPWSo4vGLTDJE6s0E!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
+      ],
+      "category": "动漫"
+    },
+    {
+      "id": "7",
+      "name": "杀戮尖塔2启动器",
+      "icon": "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8avJT*YafCOB1EzgnxeVVccg2W2gSETvzVSCVRZxCtYU7CIpwSqM7g4*f44ZG7ZXIrcMH3CFQvH3rrES1VRHoO4!/b=&bo=lgCWAJYAlgADACU!&ek=1&tl=1",
+      "download": "https://lz.qaiu.top/parser?url=https://wwbue.lanzouq.com/iLafl432pk3i&pwd=3939",
+      "size": "68.2MB",
+      "desc": "开源的启动器\n需要下载本体，导入后才可游玩。",
+      "screenshots": [
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8avJT*YafCOB1EzgnxeVVcchMp8B.i1EGxJrbvfY8Ge3hgZJ9zC38zveV4G2QXEWlO0zUEdKT8W0wIxJJSyojPo!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1",
+        "https://channel.qpic.cn/psc?/channel/NaDwC23LjvXqrn3RH.9z8avJT*YafCOB1EzgnxeVVcdCbVkmOS2uZ.QVFPMCPVSmgojkO.LwexR1Qf4hHVRDkcTnRMzjE*UBIex6c*IoJIs!/b=&bo=gARICYAESAkWADA!&ek=1&tl=1"
       ],
       "category": "工具"
     }
