@@ -2,10 +2,10 @@ globalThis.source = {
   manifest: {
     id: 'json-source',
     name: 'cywltxdy',
-    version: '1.0.8',
+    version: '1.0.9',
     minApiVersion: 1,
     homepage: 'https://raw.githubusercontent.com/wudongxiangqiu/n/refs/heads/main/%E5%88%97%E8%A1%A8.json',
-    description: '从 GitHub JSON 读取应用，支持分类主页和搜索，带图标',
+    description: '从 GitHub JSON 读取应用，支持分类主页和搜索，显示版本和大小',
     packageLookup: false,
     permissions: {
       network: ['*'],
@@ -86,10 +86,12 @@ globalThis.source = {
         id: app.id,
         name: app.name,
         description: app.desc || '',
-        category: app.category || undefined
+        category: app.category || undefined,
+        version: app.version || '未知',
+        size: app.size || '未知'
       };
       if (app.icon && app.icon.trim()) {
-        result.iconUrl = app.icon;  // 使用 iconUrl 字段
+        result.iconUrl = app.icon;
       }
       return result;
     });
@@ -117,7 +119,9 @@ globalThis.source = {
         id: app.id,
         name: app.name,
         description: app.desc || '',
-        category: app.category || undefined
+        category: app.category || undefined,
+        version: app.version || '未知',
+        size: app.size || '未知'
       };
       if (app.icon && app.icon.trim()) {
         result.iconUrl = app.icon;
@@ -135,7 +139,7 @@ globalThis.source = {
       id: app.id,
       name: app.name,
       description: app.desc || '',
-      version: '1.0',
+      version: app.version || '未知',
       screenshots: app.screenshots || [],
       downloads: downloads,
       category: app.category || undefined
